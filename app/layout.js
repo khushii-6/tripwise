@@ -13,7 +13,9 @@ export default function RootLayout({ children }) {
         color: "white"
       }}>
         {children}
-      </body>
+      <<TripProvider>
+  {children}
+</TripProvider>>
     </html>
   );
 }

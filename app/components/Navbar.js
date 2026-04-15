@@ -1,38 +1,17 @@
+import { Button } from "@/components/ui/button";
+
 export default function Navbar() {
   return (
-    <div style={{
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-      padding: "15px 40px",
-      background: "rgba(255,255,255,0.05)",
-      backdropFilter: "blur(12px)",
-      borderBottom: "1px solid rgba(255,255,255,0.1)",
-      position: "sticky",
-      top: 0
-    }}>
-      <h2 style={{
-        background: "linear-gradient(to right, #3b82f6, #06b6d4)",
-        WebkitBackgroundClip: "text",
-        color: "transparent"
-      }}>
-        ✈️ TripWise AI
-      </h2>
-
-      <div style={{ display: "flex", gap: "25px" }}>
-        {["Home", "Create", "Expenses", "Summary", "About"].map((item, i) => (
-          <a
-            key={i}
-            href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-            style={{
-              color: "white",
-              textDecoration: "none",
-              opacity: 0.8
-            }}
-          >
-            {item}
-          </a>
-        ))}
+    <div className="sticky top-0 z-50 backdrop-blur-lg bg-white/70 border-b">
+      <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
+        <h1 className="text-xl font-bold text-green-600">TripWise</h1>
+        <div className="flex gap-6 items-center">
+          <a href="/" className="hover:text-green-600">Home</a>
+          <a href="/expenses" className="hover:text-green-600">Expenses</a>
+          <a href="/summary" className="hover:text-green-600">Summary</a>
+          <a href="/about" className="hover:text-green-600">About</a>
+          <Button className="rounded-xl">Get Started</Button>
+        </div>
       </div>
     </div>
   );

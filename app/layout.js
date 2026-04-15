@@ -1,11 +1,18 @@
 export const metadata = {
-  title: "SmartTrip AI",
+  title: "TripWise AI",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body style={{
+        margin: 0,
+        fontFamily: "Inter, sans-serif",
+        background: "linear-gradient(135deg, #020617, #0f172a)",
+        color: "white"
+      }}>
+        {children}
+      </body>
     </html>
   );
 }

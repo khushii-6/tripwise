@@ -1,3 +1,4 @@
+import { TripProvider } from "./context/TripContext";
 export const metadata = {
   title: "TripWise AI",
 };
